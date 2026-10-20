@@ -2,8 +2,16 @@
 
 > Template repo. Generate a new exercise from this, then replace every `NN`,
 > `TITLE`, and `TODO` below. Delete this blockquote when you do.
+>
+> This README is the **script** variant. For an **inside Claude** or
+> **written** exercise, replace it with `variants/inside-claude/README.md` and
+> delete `src/`, `tests/` and `requirements.txt`. Either way, delete
+> `variants/` before publishing. Which kind an issue is lives in the planning
+> repo's curriculum, under *Exercise kinds*.
 
 **Issue NN of 30 · TRACK NAME** · [Read the issue](https://barrosbuilds.com/log) · [All exercises](https://github.com/andrebarros6/learning-log)
+
+**Kind:** script · **Needs:** Python 3.10+, git, an Anthropic API key (separate from a Claude subscription) · **Cost:** TODO — check current pricing at build time
 
 ---
 
@@ -19,6 +27,9 @@ explicitly when *not* to reach for it.
 ## What you'll do
 
 TODO: the exercise in 3–5 numbered steps, each one verifiable.
+
+From issue 12 on, add: *You can drive this with Claude Code — ask it to build
+each step, then check what it built against the tests.* Delete for issues 1–11.
 
 1. TODO
 2. TODO
@@ -74,8 +85,8 @@ ones you'd never have thought to test for.
 git checkout solution
 ```
 
-Try it yourself first. The solution branch has my version, including what
-broke on the way — that part's usually more useful than the working code.
+Try it yourself first. The solution branch has my version, and `SOLUTION.md`
+on it has what I found when I ran it.
 
 ## Apply it to your own work
 
