@@ -51,10 +51,14 @@ python -m venv .venv && source .venv/bin/activate   # Windows: .venv\Scripts\act
 pip install -r requirements.txt
 ```
 
+**In VS Code:** run *Python: Select Interpreter* and pick the one inside `.venv`. With more than one Python installed it's easy to land on the global one, and then nothing you just installed is there.
+
 You'll need an API key:
 
 ```bash
-export ANTHROPIC_API_KEY=sk-ant-...     # Windows: set ANTHROPIC_API_KEY=...
+export ANTHROPIC_API_KEY=sk-ant-...        # macOS / Linux
+$env:ANTHROPIC_API_KEY = "sk-ant-..."      # Windows PowerShell (VS Code's default terminal)
+set ANTHROPIC_API_KEY=sk-ant-...           # Windows cmd
 ```
 
 Never commit your key. `.env` is gitignored; use it if you prefer.
@@ -75,6 +79,8 @@ trying to build.
 ```bash
 pytest -v
 ```
+
+Run them this way, or from VS Code's Testing panel. Pressing ▶ *Run Python File* on a test file won't work: that runs it as a plain script, and the tests can't find the code they're testing.
 
 If they pass and something still feels wrong, read the code. Some bugs are
 ones you'd never have thought to test for.
